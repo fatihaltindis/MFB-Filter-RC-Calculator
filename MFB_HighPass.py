@@ -4,6 +4,12 @@ def MFB_HighPass(cutoff, gain = 1, Q = 0.707, margin = 2, filter_type = None, ca
     import numpy as np
     from tabulate import tabulate
     
+    #
+    def find_nearest(array, value):
+        array = np.asarray(array)
+        idx = (np.abs(array - value)).argmin()
+        return array[idx]
+    
     ### Initialize capacitor values
     if cap is None:
         # Default capacitor values
