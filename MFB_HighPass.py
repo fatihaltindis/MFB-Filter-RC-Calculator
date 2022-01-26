@@ -49,7 +49,7 @@ def MFB_HighPass(cutoff, gain = 1, Q = 0.707, margin = 2, filter_type = None, ca
     
     ### Filter type and Q value 
     # Available filter types are 'bessel' , 'linear' , 'butter'
-    if type(filter_type) is None:
+    if filter_type is None:
         # No filter type is specified
         # Look for Q value
         Q_ideal = Q
